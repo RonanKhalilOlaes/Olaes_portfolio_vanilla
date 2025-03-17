@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>khlilolaes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="icon" href="./assets/public/svg/brand.svg" type="image/icon type">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+
+    <nav id="desktop-nav">
+        <a href="./index.html">
+            <img class="logo" src="./assets/public/svg/brand.svg" alt="Clickable Image" width="120">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <section>
+        <h1>My After Effects Showcase</h1>
+        <video controls autoplay muted loop src="/assets/public/afterEffect/Main comp_1_short.mp4" class="video">
+            <source src="/assets/public/afterEffect/Main comp_1_short.mp4">
+            <source src="/assets/public/afterEffect/Main comp_1_short.Webm">
+        </video>
+    </section>
+    
+
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+            <p><a href="mailto:khalil.r.olaes@gmail.com">khalil.r.olaes@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+            <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+
+</body>
+
+<footer>
+    <nav>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <p>Copyright &#169; 2025 Ronan Khalil R. Olaes. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+
+<script src="script.js"></script>
+
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const starContainer = document.body;
+        for (let i = 0; i < 50; i++) {
+            let star = document.createElement("div");
+            star.classList.add("star");
+            star.style.top = Math.random() * 100 + "vh";
+            star.style.left = Math.random() * 100 + "vw";
+            star.style.animationDelay = Math.random() * 2 + "s";
+            starContainer.appendChild(star);
+        }
+    });
+</script>

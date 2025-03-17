@@ -23,7 +23,9 @@ body {
     /* Sunset */ #000428,
     #1b2735 /* Evening/Night */
   );
-  background-size: 600% 600%;
+
+  background-size: 600% 2000%;
+  background-repeat: no-repeat;
   animation: GradientBackground 120s ease infinite;
   animation: GradientBackground 500s ease infinite,
     GradientAngle 560s linear infinite;
@@ -345,6 +347,10 @@ section {
   margin-bottom: 2rem;
   margin-top: 2rem;
 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
   width: 100%;
   height: 100%; /* Adjust height as needed */
   object-fit: cover; /* Ensures images fit within the box */
@@ -451,6 +457,13 @@ article .icon {
   cursor: default;
 }
 
+.article-img {
+  width: 384.650px;  /* Set desired width */
+  height: 346.175px; /* Set desired height */
+  overflow: hidden; /* Hide excess */
+  object-fit: cover;
+}
+
 
 
 /* PROJECTS SECTION */
@@ -529,4 +542,104 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+
+/* After effects */
+
+.video{
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;  /* Centers vertically (if the parent has a height) */
+  height: 100vh;
+
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+video {
+  width: 80%;  /* Adjust the size as needed */
+  max-width: 600px; /* Prevents it from getting too big */
+}
+
+/* portfolio css */
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(290px, 1fr)
+  ); /* Auto adjusts to the screen */
+  gap: 20px;
+  padding: 20px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.portfolio-item {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%; /* Adjust height as needed */
+  object-fit: cover; /* Ensures images fit within the box */
+  transition: transform 0.4s ease-in-out; /* Smooth transition */
+}
+
+
+/* Gallery css */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 0.9fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "img1 img2 img3"
+    "img4 img5 img5"
+    ". . .";
+  gap: 20px;
+  padding: 20px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.img5 {
+  grid-area: img5;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+  margin: 0;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

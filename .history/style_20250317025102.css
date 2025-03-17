@@ -1,0 +1,642 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    45deg,
+    #151a1f,
+    #4a69bd,
+    /* Early morning */ #ff9a76,
+    #ff6f61,
+    /* Sunrise */ #87ceeb,
+    #fdfd96,
+    /* Noon */ #ffa500,
+    #ffd700,
+    /* Afternoon */ #ff4500,
+    #800080,
+    /* Sunset */ #000428,
+    #1b2735 /* Evening/Night */
+  );
+  background-size: cover;
+  min-height: 100vh;
+
+  background-size: 600% 600%;
+  animation: GradientBackground 120s ease infinite;
+  animation: GradientBackground 500s ease infinite,
+    GradientAngle 560s linear infinite;
+  position: relative;
+
+  font-family: "Bahnschrift", sans-serif;
+}
+
+/* gradient bg animation */
+@keyframes GradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  opacity: 0.6;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(42, 42, 42);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: rgb(56, 56, 56);
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: rgb(53, 53, 53);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(88, 88, 88);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 30vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 20em;
+  height: 80vh;
+  margin: auto;
+
+  max-width: 1536px
+}
+
+.section__pic-container {
+  display: flex;
+  height: auto;
+  
+  width: 100%;
+  
+  border-radius: 100%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: auto 0; */
+
+  gap: 1em;
+
+  /* tear up effect in image */
+  clip-path: polygon(10% 0, 84% 12%, 100% 100%, 25% 93%, 0 60%);
+
+  box-shadow: 10px 10px 50px rgba(42, 42, 42, 0.5);
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(26, 26, 26) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(24, 23, 23);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%; /* Adjust height as needed */
+  object-fit: cover; /* Ensures images fit within the box */
+  transition: transform 0.4s ease-in-out; /* Smooth transition */
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  /* padding: 1.5rem; */
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(290px, 1fr)
+  ); 
+  gap: 20px;
+  padding: 20px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out; 
+  
+  box-shadow: 10px 10px 50px rgba(42, 42, 42, 0.5);
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+
+  width: 100%;
+  height: 100%; /* Adjust height as needed */
+  object-fit: cover; /* Ensures images fit within the box */
+  transition: transform 0.4s ease-in-out; /* Smooth transition */
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(41, 41, 41);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+.article-img {
+  width: 384.650px;  /* Set desired width */
+  height: 346.175px; /* Set desired height */
+  overflow: hidden; /* Hide excess */
+  object-fit: cover;
+}
+
+
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgba(71, 71, 71, 0.5);
+  background: rgb(250, 250, 2500.5);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(80, 78, 78);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(33, 33, 33);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+
+/* After effects */
+
+.video{
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;  /* Centers vertically (if the parent has a height) */
+  height: 100vh;
+}
+
+video {
+  width: 80%;  /* Adjust the size as needed */
+  max-width: 600px; /* Prevents it from getting too big */
+}
+
+/* portfolio css */
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(290px, 1fr)
+  ); /* Auto adjusts to the screen */
+  gap: 20px;
+  padding: 20px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.portfolio-item {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%; /* Adjust height as needed */
+  object-fit: cover; /* Ensures images fit within the box */
+  transition: transform 0.4s ease-in-out; /* Smooth transition */
+}
+
+
+/* Gallery css */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 0.9fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "img1 img2 img3"
+    "img4 img5 img5"
+    ". . .";
+  gap: 20px;
+  padding: 20px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.img5 {
+  grid-area: img5;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+  margin: 0;
+}
+
+.gallery-item {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
