@@ -1,0 +1,293 @@
+html {
+  margin-left: 2em;
+  margin-left: 2em;
+}
+
+body {
+ 
+  /* display: flex; */
+  flex-direction: column;
+  min-height: 100vh;
+  /* align-items: center;
+  justify-content: center; */
+
+  background: linear-gradient(
+    45deg,
+    #151a1f,
+    #4a69bd,
+    /* Early morning */ #ff9a76,
+    #ff6f61,
+    /* Sunrise */ #87ceeb,
+    #fdfd96,
+    /* Noon */ #ffa500,
+    #ffd700,
+    /* Afternoon */ #ff4500,
+    #800080,
+    /* Sunset */ #000428,
+    #1b2735 /* Evening/Night */
+  );
+  background-size: 600% 600%;
+  animation: GradientBackground 120s ease infinite;
+  animation: GradientBackground 500s ease infinite, GradientAngle 560s linear infinite;
+  position: relative;
+
+  font-family: "Bahnschrift", sans-serif;
+}
+
+/* gradient bg animation */
+@keyframes GradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+    }
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  opacity: 0.6;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+/* nav */
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Figma Button */
+
+.basic-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+
+  background-color: #A1A468;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.basic-button:hover {
+  background-color: #6ac100;
+}
+
+h1 {
+    text-align: left;
+    color: #222;
+    font-size: 4em !important;
+    margin-bottom: 10px !important;
+    background: linear-gradient(to right, #A1A468, #9efa2d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.text-shadow {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: .5px .5px .5px rgba(49, 49, 49, 0.5); /* Shadow effect */
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+h2 {
+    color: #A1A468 !important;
+    font-size: 2.5em !important;
+    border-bottom: 2px solid #A1A468;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.section {
+
+    /* display:grid;
+    justify-content: center;
+    align-items: center;  */
+
+    margin-bottom: 25px;
+    padding: 15px;
+    border-left: 4px solid #A1A468;
+    background: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+
+}
+/* cards */
+.section::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.section::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    /* background: rgba(0, 212, 255, 0.1); */
+    border-radius: 50%;
+}
+
+.image {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px; /* Adds space below the paragraph */
+    letter-spacing: 0.5px; /* Slightly increases spacing between letters */
+    text-align: center; /* Optional: Makes the text block more uniform */
+    max-width: 50em; /* Optional: Prevents the paragraph from stretching too wide */
+    margin: auto;
+}
+
+.centered-text{
+
+}
+
+.footer {
+  display: flex;
+  justify-content: left;
+  padding: 5em;
+  padding-bottom: 10px;
+  font-size: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: inherit; /* Uses default text color */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: gray; /* Changes color on hover */
+}
+
+.copyright {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* portfolio */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+  
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto adjusts to the screen */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+  }
+  
+  .portfolio-item {
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures images fit within the box */
+  }
+  
+  @media (max-width: 500px) {
+    .portfolio {
+      grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .portfolio {
+      grid-template-columns: 1fr; /* One column on small screens */
+    }
+  }
+  
