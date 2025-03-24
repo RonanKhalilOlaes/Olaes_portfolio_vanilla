@@ -79,7 +79,7 @@ nav {
 }
 
 .container {
-  /* width: 100%; */
+  width: 100%;
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
@@ -294,8 +294,8 @@ p {
     }
   }
   
-  @media (max-width: 900px) {
-    .container {
-      max-width: 900px; /* One column on small screens */
+  @media (max-width: 500px) {
+    .portfolio {
+      grid-template-columns: 1fr; /* One column on small screens */
     }
   }
