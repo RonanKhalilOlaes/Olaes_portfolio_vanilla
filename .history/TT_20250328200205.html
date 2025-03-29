@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="./assets/public/svg/brand.svg" type="image/icon type">
+    <link rel="stylesheet" href="tt.css">
+    <title>TimeTogether</title>
+</head>
+
+<body>
+    <nav id="nav">
+        <a href="./index.html">
+          <img class="logo" src="./assets/public/svg/brand.svg" alt="Clickable Image" width="120">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+            <!-- <li><a href="index.html#" onclick="toggleMenu()">Experience</a></li> -->
+            <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+        </div>
+      </nav>
+<!-- <img class="logo" src="./img/WhatSupper Logo.svg" alt="Logo" class="logo"> -->
+    <div class="container">
+        <h1 class="text-shadow text-[5em] font-bold">
+             TimeTogether
+        </h1>
+        <button class="basic-button">
+            <a class= "figma-button" href="https://www.figma.com/proto/xUeTiR1wxdE6TCiHNFtZqa/IDSP05---Prototyping?node-id=1003-86385&t=TfWqsQjjJqlI7Bzh-0&scaling=scale-down&content-scaling=fixed&page-id=1003%3A80612&starting-point-node-id=1003%3A86385&show-proto-sidebar=1"
+            target="_blank" rel="noopener noreferrer">
+                Click for Prototype here</a></button>
+        <div class="section">
+            <img src="./assets/public/timetogether/TT.png" alt="Showcase" class="image">
+            <h2>Background & Summary</h2>
+            <p><b>TimeTogether</b> is a cutting-edge calendar app designed to simplify scheduling by integrating advanced AI and smart automation features. 
+              Developed to cater to busy individuals who juggle multiple responsibilities, TimeTogether allows users to optimize their time without the stress of manually managing appointments and events. 
+              By leveraging machine learning and user preferences, the app learns your habits, preferences, and typical schedules, making it capable of automatically suggesting the best times for meetings, appointments, and personal activities.
+            </p>
+            <br>
+        </div>
+        <div class="section">
+            <h2>features</h2>
+            <p>
+              Key features of TimeTogether include:
+
+              <ol>
+              
+              <li><b>Scheduling:</b> The app automatically suggests the best available times for appointments based on past behavior and preferences.</li>
+              
+              <li><b>One-Tap Scheduling:</b> Users can confirm their schedule with just one tap, eliminating the hassle of manual entry.</li>
+              
+              <li><b>Seamless Integration:</b> TimeTogether integrates with other calendar and communication tools for real-time updates.</li>
+              
+              <li><b>Personalized Recommendations:</b> The app learns over time to offer increasingly accurate scheduling suggestions, considering user priorities and preferences.</li>
+              
+              <li><b>Collaboration:</b> TimeTogether helps coordinate meetings with others, offering time slots that work for all participants without the need for endless email exchanges.</li>
+
+              </ol>
+            </p>
+        </div>
+        
+
+        <div class="section">
+            <h2>Styleguide</h2>
+            <img src="./assets/public/timetogether/Digital Style Guide Process.png" alt="Design Process" class="image">
+        </div>
+
+        
+
+        
+
+    </div>
+    
+
+</body>
+
+
+
+<footer>
+    <nav>
+      <div class="nav-links-container">
+        
+      </div>
+    </nav>
+    <p>Copyright &#169; 2025 Ronan Khalil R. Olaes. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+<script>
+
+  function startLoader(){
+    let counterElement = document.querySelector(".counter");
+    let currentValue = 0;
+
+    function updateCounter() {
+      if (currentValue === 100) {
+        return;
+      }
+
+      currentValue += Math.floor(Math.random() * 10 ) + 1;
+
+      if (currentValue > 100){
+        currentValue = 100;
+      }
+
+      counterElement.textContent = currentValue;
+
+      let delay = Math.floor(Math.random() *200) + 50;
+      setTimeout(updateCounter, delay);
+    }
+
+    updateCounter();
+  }
+
+  startLoader();
+
+  gsap.to(".counter", 0.25, {
+    delay: 3.5,
+    opacity: 0,
+  });
+
+  gsap.to(".bar",0.25, {
+    delay: 3.5,
+    height: 0,
+    stagger: {
+      amount: 0.25
+    },
+    ease: "power4.inOut",
+  });
+
+  gsap.from(".hero", 2.{
+    delay: 4.5,
+    y:400,
+    ease: ""
+  })
+
+</script>
+
+</html>

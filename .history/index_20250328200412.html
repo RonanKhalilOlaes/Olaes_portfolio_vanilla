@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,36 +10,16 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
   <title>khlilolaes</title>
-
 </head>
 
-<div class="overlay">
-    <h1 class="counter">0</h1>
-
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-
-  </div>
-
 <body>
-    
-
-  
-
   <nav id="desktop-nav">
     <a href="./index.html">
       <img class="logo" src="./assets/public/svg/brand.svg" alt="Clickable Image" width="120">
     </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <!-- <li><a href="#experience">Experience</a></li> -->
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -56,6 +35,7 @@
       </div>
       <div class="menu-links">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <!-- <li><a href="#experience" onclick="toggleMenu()">Experience</a></li> -->
         <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
       </div>
@@ -89,8 +69,25 @@
 
 
   <section id="about">
+    <!-- <p class="section__text__p1">Get To Know More</p> -->
     <h1 class="title">About Me</h1>
     <div class="section-container">
+      <!-- <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+      </div> -->
+      <!-- <div class="about-details-container"> -->
+        <!-- <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years <br />Frontend Development</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+          </div>
+        </div> -->
         <div class="text-container">
           <p>
             I'm a self motivated digital design and development student
@@ -102,7 +99,91 @@
           </p>
         </div>
       </div>
+    </div>
+    <!-- <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" /> -->
   </section>
+
+
+
+  <!-- <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Graphic Design</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Illustrator</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Photoshop</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>SASS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">UI/UX Design</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Figma</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Novice</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" /> -->
+
+  </section>
+
+
 
   <section id="projects">
     <h1 class="title">My Projects</h1>
@@ -136,7 +217,7 @@
               Visit here
             </button>
             <button class="btn btn-color-2 project-btn" onclick="window.open('https://www.figma.com/proto/xUeTiR1wxdE6TCiHNFtZqa/IDSP05---Prototyping?node-id=1003-86385&t=TfWqsQjjJqlI7Bzh-0&scaling=scale-down&content-scaling=fixed&page-id=1003%3A80612&starting-point-node-id=1003%3A86385&show-proto-sidebar=1')"
-            target="_blank" rel="noopener noreferrer"> 
+            target="_blank" rel="noopener noreferrer"> <!-- add TT link here -->
               Prototype 
             </button>
             
@@ -186,7 +267,7 @@
 
       </div>
     </div>
-
+    <!-- <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" /> -->
   </section>
 
 
@@ -217,12 +298,8 @@
     <p>Copyright &#169; 2025 Ronan Khalil R. Olaes. All Rights Reserved.</p>
   </footer>
   <script src="script.js"></script>
-
-
 </body>
 
-
-<!--  -->
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -269,12 +346,12 @@
 
   startLoader();
 
-  gsap.to(".counter", 0.55, {
+  gsap.to(".counter", 0.25, {
     delay: 3.5,
     opacity: 0,
   });
 
-  gsap.to(".bar", 0.55, {
+  gsap.to(".bar", 0.25, {
     delay: 3.5,
     height: 0,
     stagger: {
@@ -283,7 +360,14 @@
     ease: "power4.inOut",
   });
 
+  gsap.from(".hero", 2, {
+    delay: 4.5,
+    y: 400,
+    ease: "power4.inOut",
+  });
 </script>
+
+</html>
 
 </html>
 

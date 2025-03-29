@@ -14,27 +14,9 @@
 
 </head>
 
-<div class="overlay">
-    <h1 class="counter">0</h1>
 
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-
-  </div>
 
 <body>
-    
-
-  
-
   <nav id="desktop-nav">
     <a href="./index.html">
       <img class="logo" src="./assets/public/svg/brand.svg" alt="Clickable Image" width="120">
@@ -102,7 +84,7 @@
           </p>
         </div>
       </div>
-  </section>
+    </div>
 
   <section id="projects">
     <h1 class="title">My Projects</h1>
@@ -217,12 +199,8 @@
     <p>Copyright &#169; 2025 Ronan Khalil R. Olaes. All Rights Reserved.</p>
   </footer>
   <script src="script.js"></script>
-
-
 </body>
 
-
-<!--  -->
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -269,12 +247,12 @@
 
   startLoader();
 
-  gsap.to(".counter", 0.55, {
+  gsap.to(".counter", 0.25, {
     delay: 3.5,
     opacity: 0,
   });
 
-  gsap.to(".bar", 0.55, {
+  gsap.to(".bar", 0.25, {
     delay: 3.5,
     height: 0,
     stagger: {
@@ -283,7 +261,14 @@
     ease: "power4.inOut",
   });
 
+  gsap.from(".hero", 2, {
+    delay: 4.5,
+    y: 400,
+    ease: "power4.inOut",
+  });
 </script>
+
+</html>
 
 </html>
 

@@ -650,7 +650,45 @@ body,
 .bar{
   width: 10vw;
   height: 105vh;
-  background: #000428;
+  background: linear-gradient(
+    45deg,
+    #151a1f,
+    #4a69bd,
+    /* Early morning */ #ff9a76,
+    #ff6f61,
+    /* Sunrise */ #87ceeb,
+    #fdfd96,
+    /* Noon */ #ffa500,
+    #ffd700,
+    /* Afternoon */ #ff4500,
+    #800080,
+    /* Sunset */ #000428,
+    #1b2735 /* Evening/Night */
+  );
+
+  background-size: 600% 2000%;
+  background-repeat: no-repeat;
+  animation: GradientBackground 120s ease infinite;
+  animation: GradientBackground 500s ease infinite,
+    GradientAngle 560s linear infinite;
+  position: relative;
+
+  font-family: "Bahnschrift", sans-serif;
+}
+
+/* gradient bg animation */
+@keyframes GradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 }
 
 .counter {
