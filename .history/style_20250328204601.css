@@ -257,7 +257,7 @@ section {
   
 }
 
-.section__pic-container:after, .section__pic-container:before{
+.box:after, .box:before{
   mix-blend-mode:multiply;
   filter:none;
   z-index: -1;

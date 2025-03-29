@@ -5,7 +5,7 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// document.querySelector(".overlay").style.display = "none";
+document.querySelector(".overlay").style.display = "none";
 
 
 // window.addEventListener("load", () => {
